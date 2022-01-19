@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { Box, styled, Typography } from '@mui/material';
 import './App.css';
 
+const Text = styled(Typography)(({theme}) => ({
+}))
+
 function App() {
+  useEffect(() => {
+    setTimeout(() => {
+      const container = document.getElementById("main-container");
+      container.remove();
+    }, 7300);
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="main-container">
+      <div id="second-container">
+        <p id="line-1">npx create-react-app my-new-website</p>
+      </div>
     </div>
+    
   );
 }
 

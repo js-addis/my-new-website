@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+#main-container{
+  height: 100%;
+  overflow: hidden;
+  animation: fadeOut 1.5s;
+  animation-delay: 6s;
+  animation-iteration-count: 1;
+  display: 'flex'
+}
+#second-container{
+  height: 100vh;
+  padding: 4em;
+  color: lime;
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: black;  
+}
+#line-1{
+    position: relative;
+    top: 50%;  
+    width: 28em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+    animation-iteration-count: 1;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Animation */
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 17em;}
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+@keyframes fadeOut{
+  0% {
+    opacity: 1;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity:0
   }
 }
