@@ -62,11 +62,9 @@ function App() {
   })
   return (
     <MainContainer id="main-container">
-      
       <Text>npx create-react-app my-new-website</Text>
-      
     </MainContainer>
   );
 }
 
-export default App;
+export default App; 
