@@ -1,8 +1,56 @@
 import { useEffect } from 'react';
 import { Box, styled, Typography } from '@mui/material';
-import './App.css';
+
 
 const Text = styled(Typography)(({theme}) => ({
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '100%'
+  },
+  "@keyframes typewriter": {
+    from: {
+      width: "0"
+    },
+    to: {
+      width: '17em'
+    }
+  },
+  "@keyframes blinkTextCursor": {
+    from: {
+      borderRightColor: 'orange'
+    },
+    to: {
+      borderRightColor: 'transparent'
+    }
+  },
+  color: 'lime',
+  width: '17em',
+  height: 'auto',
+  margin: '0 auto',
+  borderRight: '2px solid rgba(255,255,255,.75)',
+  fontSize: '150%',
+  textAlign: 'center',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  animationIterationCount: 1,
+  animation: "typewriter 3500ms steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal"     
+}));
+const MainContainer = styled(Box)(({theme}) => ({
+  "@keyframes fadeOut": {
+    from: {
+      opacity: '100%',
+    },
+    to: {
+      opacity: '0%',
+    }
+  },
+  animation: "fadeOut 1500ms linear 5000ms 1 normal",
+  height: window.innerHeight,
+  width: '100%',
+  overflow: 'hidden',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'black',
 }))
 
 function App() {
@@ -10,15 +58,14 @@ function App() {
     setTimeout(() => {
       const container = document.getElementById("main-container");
       container.remove();
-    }, 7300);
+    }, 6450);
   })
   return (
-    <div id="main-container">
-      <div id="second-container">
-        <p id="line-1">npx create-react-app my-new-website</p>
-      </div>
-    </div>
-    
+    <MainContainer id="main-container">
+      
+      <Text>npx create-react-app my-new-website</Text>
+      
+    </MainContainer>
   );
 }
 
