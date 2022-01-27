@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Box, styled, Typography } from '@mui/material';
-
+import "./App.css";
 
 const Text = styled(Typography)(({theme}) => ({
   [theme.breakpoints.down('sm')]: {
@@ -16,23 +16,28 @@ const Text = styled(Typography)(({theme}) => ({
   },
   "@keyframes blinkTextCursor": {
     from: {
-      borderRightColor: 'orange'
+      borderRightColor: 'darkgrey'
     },
     to: {
       borderRightColor: 'transparent'
     }
   },
-  color: 'lime',
+  "@keyframes grow": {
+    from: { fontSize: '150%' },
+    to: { fontSize: '2000%' }
+  },
+  color: 'darksalmon',
   width: '17em',
   height: 'auto',
-  margin: '0 auto',
-  borderRight: '2px solid rgba(255,255,255,.75)',
+  margin: '-3px auto',
+  padding: '-3px',
+  borderRight: '6px solid darkgrey',
   fontSize: '150%',
   textAlign: 'center',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   animationIterationCount: 1,
-  animation: "typewriter 3500ms steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal"     
+  animation: "typewriter 3500ms steps(44) 1s 1 normal both, blinkTextCursor 600ms steps(44) infinite normal, grow 500ms linear 5800ms 1 normal"     
 }));
 const MainContainer = styled(Box)(({theme}) => ({
   "@keyframes fadeOut": {
@@ -43,14 +48,15 @@ const MainContainer = styled(Box)(({theme}) => ({
       opacity: '0%',
     }
   },
-  animation: "fadeOut 1500ms linear 5000ms 1 normal",
+  animation: "fadeOut 300ms linear 6000ms 1 normal",
   height: window.innerHeight,
   width: '100%',
+  margin: '0px',
   overflow: 'hidden',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'black',
+  backgroundColor: 'grey',
 }))
 
 function App() {
@@ -58,7 +64,7 @@ function App() {
     setTimeout(() => {
       const container = document.getElementById("main-container");
       container.remove();
-    }, 6450);
+    }, 6250);
   })
   return (
     <MainContainer id="main-container">
