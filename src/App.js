@@ -4,6 +4,7 @@ import "./App.css";
 import Intro from './Components/Intro';
 import WebFont from 'webfontloader';
 import SocialMedia from './Components/SocialMedia';
+import PuppyLogo from './Components/PuppyLogo';
 
 function App() {
 
@@ -17,8 +18,13 @@ function App() {
 
   return (
     <Box>
+    <PuppyLogo/>
+    {/*
+    
       <Intro/>
       <SocialMedia/>
+    
+    */}
     </Box>
   );
 }

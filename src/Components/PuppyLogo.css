@@ -1,0 +1,35 @@
+.icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 500ms ease-in-out 2500ms forwards;
+}
+.path {
+    stroke: pink;
+    stroke-width: 5px;
+    fill: transparent;
+    stroke-dasharray: 3500;
+    stroke-dashoffset: 3500;
+    animation: animate 2s linear forwards, grow 500ms ease-in-out 2500ms forwards;
+}
+@keyframes animate {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes grow {
+    to {
+        stroke-width: 20;
+    }
+}
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 0px pink);
+    }
+    to {
+        filter: drop-shadow(0 0 5px pink);
+    }
+}
