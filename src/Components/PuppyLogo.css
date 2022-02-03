@@ -1,19 +1,50 @@
 .icon {
+    padding: 100px;
     width: 100px;
     height: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: glow 500ms ease-in-out 2500ms forwards;
+    animation: glow 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+}
+.icon2 {
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow2 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+}
+.icon3 {
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow3 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+}
+.icon4 {
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow4 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
 }
 .path {
     stroke: pink;
-    stroke-width: 5px;
+    stroke-width: 15px;
     fill: transparent;
     stroke-dasharray: 3500;
     stroke-dashoffset: 3500;
-    animation: animate 2s linear forwards, grow 500ms ease-in-out 2500ms forwards;
+    animation: animate 2s linear forwards, grow 500ms ease-in-out 2250ms forwards;
 }
 @keyframes animate {
     to {
@@ -30,6 +61,40 @@
         filter: drop-shadow(0 0 0px pink);
     }
     to {
+        filter: drop-shadow(0 0 2px pink);
+    }
+}
+@keyframes glow2 {
+    from {
+        filter: drop-shadow(0 0 0px pink);
+    }
+    to {
         filter: drop-shadow(0 0 5px pink);
+    }
+}
+@keyframes glow3 {
+    from {
+        filter: drop-shadow(0 0 0px pink);
+    }
+    to {
+        filter: drop-shadow(0 0 10px pink);
+    }
+}
+@keyframes glow4 {
+    from {
+        filter: drop-shadow(0 0 0px pink);
+    }
+    to {
+        filter: drop-shadow(0 0 20px pink);
+    }
+}
+@keyframes shrink {
+    from {
+        width: 100px;
+        height: 100px;
+    }
+    to {
+        width: 0px;
+        height: 0px;
     }
 }
