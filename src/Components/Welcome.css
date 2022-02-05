@@ -1,0 +1,55 @@
+.main-container {
+    margin-left: 15%;
+}
+.line1 {
+    font-family: Questrial;
+    color: pink;
+    font-size: 20px;
+    text-shadow: 1 1 5px black;
+    animation: slideIn2 300ms ease-out 6000ms forwards;
+    opacity: 0%;
+}
+.line2 {
+   font-family: Questrial;
+   color: white;
+   font-size: 10vw;
+   text-shadow: 1px 1px 1px pink;
+   margin: 0;
+   padding: 0;
+   animation: slideIn2 400ms ease-out 6100ms forwards;
+   opacity: 0%;
+}
+.line3 {
+   font-family: Qeustrial;
+   color: darkgray;
+   font-size: 2vw;
+   margin-left: 5px;
+   margin-top: 0px;
+   margin-bottom: 10px;
+   animation: fadeIn2 600ms ease-in-out 6500ms forwards;
+   opacity: 0%;
+}
+
+@media screen and (max-width: 600px) {
+    .line3 {
+        font-size: 3vw;
+        margin-top: 5px;
+    }
+  }
+  @keyframes fadeIn2 {
+      from {
+          opacity: 0%;
+      }
+      to {
+          opacity: 100%;
+      }
+  }
+  @keyframes slideIn2 {
+    from {
+        opacity: 0%;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+.chatbox-container {
+    display: flex;
+    height: auto;
+    margin-top: 100px;
+}
+.chatbox1 {
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 0 5px pink);
+    margin: 20px;
+}
+.chatbox-path {
+    fill: gray;
+    stroke: pink;
+    stroke-width: 5px;
+}

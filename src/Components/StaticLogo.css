@@ -1,17 +1,54 @@
+
 .staticicon {
+    position: absolute;
     padding: 20px;
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(0 0 5px pink);
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 1px pink);
     opacity: 0%;
     animation: slideIn 300ms ease-in-out 5000ms forwards;
+    background-color:transparent;
+    margin: 0;
+    top: 0;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.staticicon2 {
+    position: absolute;
+    padding: 20px;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 1px pink);
+    opacity: 0%;
+    animation: slideIn 300ms ease-in-out 5000ms forwards;
+    background-color:transparent;
+    margin: 0;
+    top: 0;
+    margin-left: 20px;
+    cursor: pointer;
 }
 .staticpath {
     stroke: pink;
-    stroke-width: 35px;
+    stroke-width: 25px;
     fill: transparent;
     stroke-dasharray: 0;
     stroke-dashoffset: 0;
+}
+@media screen and (max-width: 600px) {
+    .staticicon {
+        margin-left: 0px;
+    }
+    .staticicon2 {
+        margin-left: 0px;
+    }
+}
+@keyframes fadeInFast {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 @keyframes slideIn {
     from {

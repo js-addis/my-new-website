@@ -6,7 +6,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: glow 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+    animation: glow 500ms ease-in-out 2250ms forwards, shrink 300ms ease-in-out 4000ms forwards;
 }
 .icon2 {
     padding: 100px;
@@ -16,7 +16,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: glow2 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+    animation: glow2 500ms ease-in-out 2250ms forwards, shrink 300ms ease-in-out 4000ms forwards;
 }
 .icon3 {
     padding: 100px;
@@ -26,7 +26,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: glow3 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+    animation: glow3 500ms ease-in-out 2250ms forwards, shrink 300ms ease-in-out 4000ms forwards;
 }
 .icon4 {
     padding: 100px;
@@ -36,11 +36,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: glow4 500ms ease-in-out 2250ms forwards, shrink 400ms ease-in-out 4000ms forwards;
+    animation: glow4 500ms ease-in-out 2250ms forwards, shrink 300ms ease-in-out 4000ms forwards;
 }
 .path {
     stroke: pink;
-    stroke-width: 15px;
+    stroke-width: 25px;
     fill: transparent;
     stroke-dasharray: 3500;
     stroke-dashoffset: 3500;
@@ -53,7 +53,7 @@
 }
 @keyframes grow {
     to {
-        stroke-width: 20;
+        stroke-width: 35;
     }
 }
 @keyframes glow {
