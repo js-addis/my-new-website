@@ -39,6 +39,9 @@
     filter: drop-shadow(0px 0px 2px pink);
     cursor: pointer;
 }
+.github:hover {
+    transform: scale(1.5);
+}
 .linkedIn {
     color: white;
     opacity: 0%;
@@ -56,6 +59,9 @@
 .resume {
     animation: slideIn 300ms ease-in-out 5500ms forwards;
     cursor: pointer;
+}
+.resume:hover{
+    transform: translateY(-5px);
 }
 @media screen and (max-width: 600px) {
     .social-media {
@@ -79,6 +85,12 @@
         animation: reverseSlideIn 300ms ease-in-out 5200ms forwards;
     }
   }
+@keyframes hover-animation {
+    from {
+        transform: translateY(5px);
+    }
+    
+}
 @keyframes reverseSlideIn {
     from {
         opacity: 0%;

@@ -4,7 +4,7 @@
 .line1 {
     font-family: Questrial;
     color: pink;
-    font-size: 20px;
+    font-size: 25px;
     text-shadow: 1 1 5px black;
     animation: slideIn2 300ms ease-out 6000ms forwards;
     opacity: 0%;
@@ -31,6 +31,9 @@
 }
 
 @media screen and (max-width: 600px) {
+    .line1 {
+        font-size: 20px;
+    }
     .line3 {
         font-size: 3vw;
         margin-top: 5px;

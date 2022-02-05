@@ -56,6 +56,6 @@
         transform: translateY(-20px);
     }
     to { 
-        opacity: 100%;
+        opacity: 100%; 
     }
 }
