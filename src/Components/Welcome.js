@@ -33,7 +33,7 @@ export default function Welcome() {
                               <br/>but other developments are in the works!
                               <br/>Check out my Github and
             </div>
-            <Resume onClick={() => window.open("/resume.html", "_blank")}>View My Resume</Resume>
+            <Resume onClick={() => window.open("/resume/resume.html", "_blank")}>View My Resume</Resume>
         </div>
         
     )
