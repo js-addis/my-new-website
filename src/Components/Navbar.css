@@ -20,7 +20,7 @@
     font-size: 20px;
     margin-left: 120px;
     opacity: 0;
-    animation: slideIn 300ms ease-in-out 5100ms forwards;
+    animation: slideIn 400ms ease-in-out 5100ms forwards;
 }
 .social-media {
     background-color: transparent;
@@ -35,33 +35,35 @@
 .github {
     color: white;
     opacity: 0%;
-    animation: slideIn 300ms ease-in-out 5200ms forwards;
+    animation: slideIn 400ms ease-in-out 5200ms forwards;
     filter: drop-shadow(0px 0px 2px pink);
     cursor: pointer;
 }
-.github:hover {
-    transform: scale(1.5);
+#stackoverflow {
+    color: white;
+    opacity: 0%;
+    animation: slideIn 400ms ease-in-out 5300ms forwards;
+    filter: drop-shadow(0px 0px 2px pink);
+    cursor: pointer;
+    font-size: 25px;
 }
 .linkedIn {
     color: white;
     opacity: 0%;
-    animation: slideIn 300ms ease-in-out 5300ms forwards;
+    animation: slideIn 400ms ease-in-out 5400ms forwards;
     filter: drop-shadow(0px 0px 2px pink);
     cursor: pointer;
 }
 .facebook {
     color: white;
     opacity: 0%;
-    animation: slideIn 300ms ease-in-out 5400ms forwards;
+    animation: slideIn 400ms ease-in-out 5500ms forwards;
     filter: drop-shadow(0px 0px 2px pink);
     cursor: pointer;
 }
 .resume {
-    animation: slideIn 300ms ease-in-out 5500ms forwards;
+    animation: slideIn 400ms ease-in-out 5600ms forwards;
     cursor: pointer;
-}
-.resume:hover{
-    transform: translateY(-5px);
 }
 @media screen and (max-width: 600px) {
     .social-media {
@@ -73,23 +75,25 @@
         margin-left: 80px;
     }
     .github {
-        animation: reverseSlideIn 300ms ease-in-out 5500ms forwards;
+        animation: reverseSlideIn 400ms ease-in-out 5600ms forwards;
+    }
+    #stackoverflow {
+        animation: reverseSlideIn 400ms ease-in-out 5500ms forwards;
     }
     .linkedIn {
-        animation: reverseSlideIn 300ms ease-in-out 5400ms forwards;
+        animation: reverseSlideIn 400ms ease-in-out 5400ms forwards;
     }
     .facebook {
-        animation: reverseSlideIn 300ms ease-in-out 5300ms forwards;
+        animation: reverseSlideIn 400ms ease-in-out 5300ms forwards;
     }
     .resume {
-        animation: reverseSlideIn 300ms ease-in-out 5200ms forwards;
+        animation: reverseSlideIn 400ms ease-in-out 5200ms forwards;
     }
   }
 @keyframes hover-animation {
     from {
         transform: translateY(5px);
     }
-    
 }
 @keyframes reverseSlideIn {
     from {

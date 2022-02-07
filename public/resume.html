@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>resume</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+            html, body {
+                padding: 0;
+                margin: 0;
+            }
+            #star {
+                font-size: 10px;
+            }
+            .sidebar {
+                position: fixed;
+                width: 25%;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background-color: dimgrey;
+            }
+            /* TOPBAR */
+            .topbar {
+                position: fixed;
+                height: 150px;
+                width: calc(100vw -25%);
+                background-color: pink;
+                margin-left: 25%;
+            }
+            .topbar-body {
+                font-size: 29px;
+                color: white;
+                margin: 20px;
+                font-family: Questrial;
+                text-align: center;
+                
+            }
+            /* TOPBAR */
+            /* BODY */
+            .document-body {
+                margin-top: 150px;
+                margin-left: 25%;
+                position: fixed;
+                background-color: transparent;
+                width: 75vw;
+                height: calc(100vh - 150px);
+                display: flex;
+            }
+            .column1 {
+                width: 50%;
+                height: inherit;
+                background-color: transparent;
+            }
+            .column2 {
+                width: 50%;
+                height: inherit;
+                background-color: transparent;
+            }
+            .section {
+                margin: 20px;
+                margin-right: 10px;
+                margin-bottom: 30px;
+                background-color: transparent;
+            }
+            .column-title {
+                font-size: 30px;
+                color: dimgrey;
+                font-family: Questrial;
+                margin-left: 18px;
+                margin-top: 20px;
+            }
+            .section-title {
+                font-size: 20px;
+                color: dimgrey;
+                font-family: Questrial;
+            }
+            .section-location {
+                font-size: 15px;
+                color: pink;
+                font-family: Questrial;
+            }
+            .section-date {
+                font-size: 12px;
+                color: dimgrey;
+                font-family: Questrial;
+            }
+            .section-body {
+                margin-top: 5px;
+                font-size: 12px;
+                color: dimgrey;
+                font-family: Questrial;
+            }
+            .education-title {
+                font-size: 30px;
+                color: dimgrey;
+                font-family: Questrial;
+                margin-left: 5px;
+                margin-top: 20px;
+            }
+            .education-section {
+                margin: 20px;
+                margin-left: 10px;
+                margin-bottom: 30px;
+                background-color: transparent;
+            }
+            /* BODY */
+            /* SIDEBAR */
+            .flexbox {
+                display: flex;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .title-container {
+                height: 150px;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .name {
+                font-size: 3.5vw;
+                color: white;
+                margin: auto;
+                margin-bottom: 0px;
+                font-family: Questrial;
+            }
+            .title {
+                font-size: 2vw;
+                color: white;
+                margin: auto;
+                margin-top: 0px;
+                font-family: Questrial;
+            }
+            .heading {
+                font-size: 20px;
+                color: white;
+                font-family: Questrial;
+                background-color: transparent;
+                margin-bottom: 20px;
+            }
+            .side-nav-container {
+                display: flex; 
+                justify-content: center;
+                background-color: transparent;
+            }
+            .side-nav-item {
+                color: white;
+                font-family: Questrial; 
+                display: flex; 
+                align-items: center;
+                font-size: 10px;
+            }
+            #phone {
+                font-size: 20px;
+            }
+            #email {
+                font-size: 20px;
+            }
+            .divider {
+                width: 70%;
+                height: 2px;
+                background-color: pink;
+                margin: 30px;
+            }
+            .skill-container {
+                padding-left: 60px;
+                padding-right: 60px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                background-color: transparent;
+            }
+            .skill-title {
+                font-family: Questrial;
+                font-size: 12px;
+                color: pink;
+            }
+            .skill-bar {
+                width: 100%;
+                height: 8px;
+                background-color: gray;
+                border-radius: 3px;
+            }
+            .skill-progress {
+                background-color: white;
+                height: 8px;
+                border-radius: 3px;
+            }
+            /* SIDEBAR */   
+            @media screen and (max-width: 750px) {
+                
+                .sidebar {
+                    width: 35%;
+                }
+                .topbar {
+                    margin-left: 35%;
+                    height: 100px;
+                }
+                .topbar-body {
+                    font-size: 11px;
+                    
+                }
+                .document-body {
+                    margin-left: 35%;
+                    margin-top: 100px;
+                    width: 65vw;
+                }
+                .column-title {
+                    font-size: 15px;
+                    margin-left: 10px;
+                }
+                .education-title {
+                    font-size: 15px;
+                }
+                .section, .education-section {
+                    margin-bottom: 20px;
+                    margin: 10px;
+                    margin-right: 5px;
+                }
+                .education-section {
+                    margin-bottom: 20px;
+                    margin: 10px;
+                    margin-left: 5px;
+                }
+                .section-title {
+                    font-size: 12px;
+                }
+                .section-location {
+                    font-size: 10px;
+                }
+                .section-date {
+                    font-size: 8px;
+                }
+                .section-body {
+                    font-size: 8px;
+                }
+                .skill-container {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    
+                }
+                .skill-bar {
+                    height: 5px;
+                }
+                .skill-progress {
+                    height: 5px;
+                }
+                .skill-title {
+                    font-size: 8px;
+                }
+                .title-container {
+                    height: 100px;
+                }
+                .name {
+                    font-size: 20px;
+                }
+                .title {
+                    font-size: 12px;
+                }
+                .heading {
+                    font-size: 15px;
+                }
+                .divider {
+                    margin: 20px;
+                }
+                .side-nav-item {
+                    font-size: 6px;
+                }
+                #email {
+                    
+                }
+                #phone {
+
+                }
+                #website {
+                    
+                }
+                #star {
+                    font-size: 6px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--TOPBAR-->
+        <div class="topbar">
+            <div class="topbar-body">Creative and experimental programmer driven mostly by passion seeking to develop skills and projects in a team of like-minded professionals.</div>
+        </div>
+        <!--SIDEBAR-->
+        <div class="sidebar">
+            <!--INTRO-->
+            <div class="title-container">
+                <div class="name">Jacob Addis</div>
+                <div class="title">Web Developer</div>
+            </div>
+            <!--INTRO-->
+            <div class="flexbox">
+                <div class="divider"></div>
+            </div>
+            <!--CONTACT-->
+            <div class="flexbox">
+                <div class="heading">Contact:</div>
+            </div>
+            <div class="side-nav-container">
+                <div class="side-nav-item">
+                    <i class="material-icons" id="website">home</i>
+                </div>
+                <div class="side-nav-item">
+                    https://www.js-addis.com
+                </div>
+            </div>
+            <div class="side-nav-container">
+                <div class="side-nav-item">
+                    <i class="material-icons" id="email">email</i>
+                </div>
+                <div class="side-nav-item">
+                    jacobaddis23@gmail.com
+                </div>
+            </div>
+            <div class="side-nav-container">
+                <div class="side-nav-item">
+                    <i id="phone" class="material-icons">phone_iphone</i>
+                </div>
+                <div class="side-nav-item">
+                    412-699-8349
+                </div>
+            </div>
+            <!--CONTACT-->
+            <div class="flexbox">
+                <div class="divider"></div>
+            </div>
+            <!--SKILLS-->
+            <div class="flexbox">
+                <div class="heading" style="margin-top: 15px">Skills:</div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">HTML5</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:95%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">CSS3</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:90%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">JS / JQuery</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:85%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">React</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:80%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">PHP</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:65%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">MySQL</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:60%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">NodeJS</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:40%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">Material UI</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:90%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-title">AWS</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:30%"></div>
+                </div>
+            </div>
+            <!--SKILLS-->
+        </div>
+        <!--SIDEBAR-->
+        <!--BODY-->
+        <div class="document-body">
+            <div class="column1">
+                <div class="column-title">Experience</div>
+                <div class="section">
+                    <div class="section-title">Freelance Web Developer</div>
+                    <div class="section-location">Pittsburgh, PA</div>
+                    <div class="section-date">November 2021 - present</div>
+                    <div class="section-body"><i class="material-icons" id="star" style="color:pink">star</i>Providing examples and inspiration for clients to realize their goals.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>listening to and taking feedback from clients.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Designing and building exceptional products while gaining valuable experience in the process.
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Web Development Intern</div>
+                    <div class="section-location">Seton Hill University</div>
+                    <div class="section-date">August 2018 - December 2018</div>
+                    <div class="section-body"><i class="material-icons" id="star" style="color:pink">star</i>Designed and built a website for tutoring programming and algorithms.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Researched and learned about several popular sorting algorithms.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Thought creatively to express algorithms in a visual way.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Designed and programmed complex JavaScript animations.   
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Programming & Algorithms tutor</div>
+                    <div class="section-location">Seton Hill University</div>
+                    <div class="section-date">August 2017 - December 2018</div>
+                    <div class="section-body"><i class="material-icons" id="star" style="color:pink">star</i>Learned and re-learned course material to best assist students.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Maintained contact with students and provided tutoring virtually.</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Held in-person tutoring sessions.
+                    </div>
+                </div>
+            </div>
+            <div class="column2">
+                <div class="education-title">Education</div>
+                <div class="education-section">
+                    <div class="section-title">B.S. Computer Science</div>
+                    <div class="section-location">Seton Hill University</div>
+                    <div class="section-date">2015 - 2018</div>
+                    <div class="section-body">Courses:</div>
+                    <div class="section-body">Algorithms, App Development, Computer Ethics, Comp Security & Forensics, Data Structures, Database Management, Graphics, Mobile Forensics, Programming 1&2, Software Engineering, Linear Algebra, Discreet Mathematics</div>
+                    <div class="section-body"><i class="material-icons" id="star" style="color:pink">star</i>Took a leave of absence during the seventh semester.</div>
+                </div>
+                <div class="education-section">
+                    <div class="section-title">Online Courses</div>
+                    <div class="section-location">Lynda.com / LinkedIn Learning</div>
+                    <div class="section-body">Courses:</div>
+                    <div class="section-body"><i class="material-icons" id="star" style="color:pink">star</i>PHP with MySQL Essential Training</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>React.js Essential Training</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>React.js Building an Interface</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Software Development Life Cycle (SDLC)</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>MERN Essential Training</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Express Essential Training</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Node.js Essential Training</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Building a Website with Node.js and Express.js</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Electron: Building Cross Platform Desktop Apps</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>MEAN Stack and MongoDB: Development Techniques</br>
+                                              <i class="material-icons" id="star" style="color:pink">star</i>Create Interfaces with FXML and JavaFX
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BODY-->
+    </body>
+</html>

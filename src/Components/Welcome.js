@@ -6,7 +6,8 @@ export default function Welcome() {
     const Resume = styled(Button)(({theme}) => ({
         [theme.breakpoints.up('sm')]: {
            marginTop: '15px',
-           fontSize: '18px'
+           fontSize: '18px',
+           marginLeft: '5px',
         },
         border: '2px solid pink',
         borderRadius: 0,
@@ -16,10 +17,13 @@ export default function Welcome() {
         boxShadow: '0 0 5px pink',
         textShadow: '0px 0px 3px pink',
         textTransform: 'capitalize',
-        marginLeft: '5px',
+        marginLeft: '0px',
         opacity: 0,
-        animation: 'fadeIn2 300ms ease-in-out 6600ms forwards'
+        animation: 'slideIn2 350ms ease-in-out 6600ms forwards'
     }))
+    function Open() {
+        window.open("resume.html", "_blank");
+    }
     return(
        <div className="main-container">
             <div className="line1">Hi, I'm</div>
@@ -29,7 +33,7 @@ export default function Welcome() {
                               <br/>but other developments are in the works!
                               <br/>Check out my Github and
             </div>
-            <Resume>View My Resume</Resume>
+            <Resume onClick={() => window.open("/resume.html", "_blank")}>View My Resume</Resume>
         </div>
         
     )
