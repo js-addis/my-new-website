@@ -21,9 +21,6 @@ export default function Welcome() {
         opacity: 0,
         animation: 'slideIn2 350ms ease-in-out 6600ms forwards'
     }))
-    function Open() {
-        window.open("resume.html", "_blank");
-    }
     return(
        <div className="main-container">
             <div className="line1">Hi, I'm</div>
@@ -33,7 +30,7 @@ export default function Welcome() {
                               <br/>but other developments are in the works!
                               <br/>Check out my Github and
             </div>
-            <Resume onClick={() => window.open("https://www.js-addis.com/resume.html", "_blank")}>View My Resume</Resume>
+            <Resume onClick={() => window.open("/resume.html", "_blank")}>View My Resume</Resume>
         </div>
         
     )
