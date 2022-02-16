@@ -30,7 +30,7 @@ export default function Welcome() {
                               <br/>but other developments are in the works!
                               <br/>Check out my Github and
             </div>
-            <Resume onClick={() => window.open("hhttps://main.dcou72f2xs9p9.amplifyapp.com/", "_blank")}>View My Resume</Resume>
+            <Resume onClick={() => window.open("https://main.dcou72f2xs9p9.amplifyapp.com/", "_blank")}>View My Resume</Resume>
         </div>
         
     )
