@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Questrial', 'Nunito', 'Jet Brains Mono', 'Montserrat', 'Poppins Thin']
+        families: ['Questrial']
       }
     })
     const App = document.querySelector("html");
