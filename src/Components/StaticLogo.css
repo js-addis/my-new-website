@@ -6,7 +6,7 @@
     height: 60px;
     filter: drop-shadow(0 0 1px pink);
     opacity: 0%;
-    animation: slideIn 300ms ease-in-out 5000ms forwards;
+    animation: slideIn 300ms ease-in-out 4900ms forwards;
     background-color:transparent;
     margin: 0;
     top: 0;
@@ -20,7 +20,7 @@
     height: 60px;
     filter: drop-shadow(0 0 1px pink);
     opacity: 0%;
-    animation: slideIn 300ms ease-in-out 5000ms forwards;
+    animation: slideIn 300ms ease-in-out 4900ms forwards;
     background-color:transparent;
     margin: 0;
     top: 0;

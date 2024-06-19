@@ -19,11 +19,11 @@ export default function Welcome() {
         textTransform: 'capitalize',
         marginLeft: '0px',
         opacity: 0,
-        animation: 'slideIn2 350ms ease-in-out 6600ms forwards'
+        animation: 'slideIn2 350ms ease-in-out 6800ms forwards'
     }))
     return(
        <div className="main-container">
-            <div className="line1">Hi, I'm</div>
+            <div className="line1">Hello, I'm</div>
             <div className="line2">Jacob Addis</div>
             <div className="line3">and I built this website to show off my skills.
                               <br/>It's basically just a linktree at the moment,
